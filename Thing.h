@@ -1,3 +1,4 @@
+#include <everything.h>
 #include <string>
 using namespace std;
 
@@ -13,4 +14,6 @@ class Thing {
         void setObj(string n);
 
         string getObj();
+
+        Json::Value dump2JSON();
 };

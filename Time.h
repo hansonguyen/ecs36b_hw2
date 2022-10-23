@@ -1,3 +1,4 @@
+#include <everything.h>
 #include <string>
 using namespace std;
 
@@ -13,4 +14,6 @@ class Time {
         void setTime(string n);
 
         string getTime();
+
+        Json::Value dump2JSON();
 };

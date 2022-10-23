@@ -1,3 +1,4 @@
+#include <everything.h>
 #include <string>
 using namespace std;
 
@@ -6,6 +7,7 @@ class Person {
         string name;
 
     public:
+
         Person(string n);
 
         Person();
@@ -13,4 +15,6 @@ class Person {
         void setName(string n);
 
         string getName();
+        
+        Json::Value dump2JSON();
 };
