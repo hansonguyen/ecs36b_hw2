@@ -1,5 +1,6 @@
 #include <string>
 #include "Record.h"
+#include "everything.h"
 using namespace std;
 
 Record::Record(Person p1, Person p2, Thing t1, Thing t2, Time thisTime, GPS thisLocation) {
@@ -36,3 +37,30 @@ Time Record::getTime() {return objTime;}
 void Record::setGPS(GPS gpsX) {this->objGPS = gpsX;}
 
 GPS Record::getGPS() {return objGPS;}
+
+Json::Value
+Record:: dump2JSON
+() {
+    Json::Value result {};
+	Json::Value jv_result;
+
+    jv_result = (this->objPerson).dump2JSON();
+	result["person1"] = jv_result;
+
+    jv_result = (this->interactPerson).dump2JSON();
+	result["person2"] = jv_result;
+
+    jv_result = (this->objThing1).dump2JSON();
+	result["thing1"] = jv_result;
+
+	jv_result = (this->objThing2).dump2JSON();
+	result["thing2"] = jv_result;
+
+    jv_result = (this->objTime).dump2JSON();
+	result["time"] = jv_result;
+
+    jv_result = (this->objGPS).dump2JSON();
+	result["GPS"] = jv_result;
+
+	return result;
+}

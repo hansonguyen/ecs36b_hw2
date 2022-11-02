@@ -5,6 +5,7 @@
 #include "Thing.h"
 #include "GPS.h"
 #include "Time.h"
+#include "everything.h"
 using namespace std;
 
 class Record {
@@ -44,5 +45,7 @@ public:
     void setGPS(GPS gpsX);
 
     GPS getGPS();
+
+    Json::Value dump2JSON();
 };
 #endif

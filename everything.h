@@ -1,3 +1,6 @@
+#ifndef EVERYTHING_H
+#define EVERYTHING_H
+
 #include <strings.h>
 #include <string>
 #include <iostream>
@@ -19,3 +22,5 @@
 
 // c library
 #include <arpa/inet.h>
+
+#endif

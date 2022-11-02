@@ -5,6 +5,7 @@
 #include "Record.h"
 #include "Time.h"
 #include "Record.h"
+#include "everything.h"
 
 using namespace std;
 
@@ -51,33 +52,18 @@ int main(int argc, char *argv[]) {
     fourthRecord.setThing1(trees);
     fourthRecord.setTime(evening);
 
-    cout << firstRecord.getPerson().getName() << endl;
-    cout << firstRecord.getInteract().getName() << endl;
-    cout << firstRecord.getThing1().getObj() << endl;
-    cout << firstRecord.getThing2().getObj() << endl;
-    cout << firstRecord.getGPS().getLocation() << endl;
-    cout << firstRecord.getTime().getTime() << endl;
-
-    cout << secondRecord.getPerson().getName() << endl;
-    cout << secondRecord.getInteract().getName() << endl;
-    cout << secondRecord.getThing1().getObj() << endl;
-    cout << secondRecord.getThing2().getObj() << endl;
-    cout << secondRecord.getGPS().getLocation() << endl;
-    cout << secondRecord.getTime().getTime() << endl;
-
-    cout << thirdRecord.getPerson().getName() << endl;
-    cout << thirdRecord.getInteract().getName() << endl;
-    cout << thirdRecord.getThing1().getObj() << endl;
-    cout << thirdRecord.getThing2().getObj() << endl;
-    cout << thirdRecord.getGPS().getLocation() << endl;
-    cout << thirdRecord.getTime().getTime() << endl;
-
-    cout << fourthRecord.getPerson().getName() << endl;
-    cout << fourthRecord.getInteract().getName() << endl;
-    cout << fourthRecord.getThing1().getObj() << endl;
-    cout << fourthRecord.getThing2().getObj() << endl;
-    cout << fourthRecord.getGPS().getLocation() << endl;
-    cout << fourthRecord.getTime().getTime() << endl;
+    Json::Value firstRecordJSON = firstRecord.dump2JSON();
+    Json::Value secondRecordJSON = secondRecord.dump2JSON();
+    Json::Value thirdRecordJSON = thirdRecord.dump2JSON();
+    Json::Value fourthRecordJSON = fourthRecord.dump2JSON();
+    cout << "Record 1:" << endl;
+    cout << firstRecordJSON.toStyledString() << endl;
+    cout << "Record 2:" << endl;
+    cout << secondRecordJSON.toStyledString() << endl;
+    cout << "Record 3:" << endl;
+    cout << thirdRecordJSON.toStyledString() << endl;
+    cout << "Record 4:" << endl;
+    cout << fourthRecordJSON.toStyledString() << endl;
 
     return 0;
 }
