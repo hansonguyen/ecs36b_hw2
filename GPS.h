@@ -1,4 +1,5 @@
-#include <everything.h>
+#ifndef GPS_H
+#define GPS_H
 #include <string>
 using namespace std;
 
@@ -14,6 +15,5 @@ class GPS {
         void setLocation(string n);
 
         string getLocation();
-
-        Json::Value dump2JSON();
 };
+#endif

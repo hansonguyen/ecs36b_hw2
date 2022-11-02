@@ -1,5 +1,5 @@
 #include <string>
-#include <Time.h>
+#include "Time.h"
 using namespace std;
 
 Time::Time(string n) {this->order = n;}

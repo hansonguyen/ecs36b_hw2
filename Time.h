@@ -1,4 +1,5 @@
-#include <everything.h>
+#ifndef TIME_H
+#define TIME_H
 #include <string>
 using namespace std;
 
@@ -14,6 +15,5 @@ class Time {
         void setTime(string n);
 
         string getTime();
-
-        Json::Value dump2JSON();
 };
+#endif

@@ -1,4 +1,5 @@
-#include <everything.h>
+#ifndef PERSON_H
+#define PERSON_H
 #include <string>
 using namespace std;
 
@@ -15,6 +16,5 @@ class Person {
         void setName(string n);
 
         string getName();
-        
-        Json::Value dump2JSON();
 };
+#endif

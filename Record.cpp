@@ -1,64 +1,38 @@
 #include <string>
-#include <Record.h>
+#include "Record.h"
 using namespace std;
 
-Record::Record() {
-	this->objPerson = NULL;
-	this->interactPerson = NULL;
-	this->objThing = NULL;
-	this->objTime = NULL;
-	this->objGPS = NULL;
-}
-
-Record::Record(Person p1, Person p2, Thing thisThing, Time thisTime, GPS thisLocation) {
+Record::Record(Person p1, Person p2, Thing t1, Thing t2, Time thisTime, GPS thisLocation) {
 	this->objPerson = p1;
 	this->interactPerson = p2;
-	this->objThing = thisThing;
+	this->objThing1 = t1;
+	this->objThing2 = t2;
 	this->objTime = thisTime;
 	this->objGPS = thisLocation;
 }
 
-void Record::setPerson(Person personX) {
-	this->objPerson = personX;
-}
+Record::Record() {}
 
-Person Record::getPerson() {
-	return this->objPerson;
-}
+void Record::setPerson(Person personX) {this->objPerson = personX;}
 
-void Record::setInteract(Person personX) {
-	this->interactPerson = personX;
-}
+Person Record::getPerson() {return this->objPerson;}
 
-Person Record::getInteract() {
-	return interactPerson;
-}
+void Record::setInteract(Person personX) {this->interactPerson = personX;}
 
-void Record::setThing(Thing thingX) {
-	this->objThing = thingX;
-}
+Person Record::getInteract() {return interactPerson;}
 
-Thing Record::getThing() {
-	return objThing;
+void Record::setThing1(Thing thingX) {this->objThing1 = thingX;}
 
-}
+Thing Record::getThing1() {return objThing1;}
 
-void Record::setTime(Time timeX) {
+void Record::setThing2(Thing thingX) {this->objThing2 = thingX;}
 
-	this->objTime = timeX
-}
+Thing Record::getThing2() {return objThing2;}
 
-Time Record::getTime() {
-	
-	return objTime;
-}
+void Record::setTime(Time timeX) {this->objTime = timeX;}
 
-void Record::setGPS(GPS gpsX) {
+Time Record::getTime() {return objTime;}
 
-	this->objGPS = gpsX
-}
+void Record::setGPS(GPS gpsX) {this->objGPS = gpsX;}
 
-GPS Record::getGPS() {
-
-	return objGPS;
-}
+GPS Record::getGPS() {return objGPS;}

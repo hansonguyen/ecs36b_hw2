@@ -1,5 +1,5 @@
 #include <string>
-#include <GPS.h>
+#include "GPS.h"
 using namespace std;
 
 GPS::GPS(string n) {this->location = n;}
